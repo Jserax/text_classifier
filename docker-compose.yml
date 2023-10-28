@@ -6,10 +6,10 @@ services:
     container_name: web-app
     ports:
       - "8000:8000"
-    command: streamlit run app.py --server.port 8000
+    command: streamlit run webapp.py --server.port 8000
   app:
     build: ./app
     container_name: app
     ports:
       - "3000:3000"
-    command: uvicorn service:app --host 0.0.0.0 --port 3000 --workers 4
+    command: uvicorn service:app --host 0.0.0.0 --port 3000 --workers 1

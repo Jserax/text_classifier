@@ -3,5 +3,7 @@ pandas
 scikit-learn
 torch
 transformers
-bentoml
+onnx
+onnxruntime
+fastapi
 streamlit

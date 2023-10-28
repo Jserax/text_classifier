@@ -65,8 +65,8 @@ def predict(input_data: Input) -> dict[str, str]:
     out = session.run(
         ["output"],
         {
-            "input1": data.input_ids,
-            "input2": data.attention_mask,
+            "input1": data.input_ids.astype("int32"),
+            "input2": data.attention_mask.astype("int32"),
         },
     )
     return {"toxic": out[0]}
